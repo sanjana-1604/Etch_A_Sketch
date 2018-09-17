@@ -1,0 +1,90 @@
+body{
+
+  color: #000;
+  background-color: #ff3385;
+  text-align:center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header-Main */
+#title
+{
+  font-family: 'Press Start 2P', cursive;
+}
+@keyframes typing{
+  from {width:0}
+  to {width:100%}
+}
+#title h1
+{
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40,end);
+}
+/* Header-Main- Ends */
+
+
+
+/* Welcome Board */
+@keyframes sliding
+{
+  from {top:-200px}
+  to {top:0}
+}
+
+#Welcome-Board
+{
+  position:relative;
+  top:0;
+  animation: sliding 3s ease-in-out;
+  width: 40%;
+  background-color:rgba(255, 204, 255, 0.7);
+  box-shadow: 2px 1px 5px 0px;
+}
+
+#Welcome-Board div{
+  margin-bottom:5px ;
+  padding: 5px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-weight: bold;
+}
+#WelcomeBrd-Header
+{
+  background-color: #8c8c8c;
+  color:white;
+
+}
+.btn-3D
+{
+  position:relative;
+  background-color: #8c8c8c;
+  color:white;
+  border:none;
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: -6px 6px 0 hsl(350, 10%, 30%);
+}
+.btn-3D:hover
+{
+  background-color: hsl(350, 10%, 45%);
+}
+.btn-3D:active
+{
+  background: hsl(350, 10%, 40%);
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 hsl(350, 10%, 30%);
+}
+
+/* Welcome Board -ENDS*/
+
+
+.container
+{
+  display:grid;
+  grid-gap: 2px;
+  box-shadow: 1px 0 5px 0 ;
+  width: min-content;  
+}
