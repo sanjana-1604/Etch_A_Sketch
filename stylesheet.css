@@ -1,7 +1,8 @@
 body{
-
+  width:100%;
+  height:100%;
   color: #000;
-  background-color: #ff3385;
+  background-color:  #ffb3d1;
   text-align:center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -30,61 +31,153 @@ body{
 @keyframes sliding
 {
   from {top:-200px}
-  to {top:0}
+  to {top:60px}
 }
 
 #Welcome-Board
 {
   position:relative;
-  top:0;
-  animation: sliding 3s ease-in-out;
-  width: 40%;
-  background-color:rgba(255, 204, 255, 0.7);
+  top:60px;
+  animation: sliding 1s ease-in-out;
+  background-color:rgba(255, 204, 255, 0.9);
   box-shadow: 2px 1px 5px 0px;
+  width:40%;
+  left:30%;
 }
 
 #Welcome-Board div{
   margin-bottom:5px ;
-  padding: 5px;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-bottom: solid 1px rgb(255, 255, 255);
   text-align: center;
   font-weight: bold;
 }
-#WelcomeBrd-Header
+
+.Data-input input
 {
-  background-color: #8c8c8c;
-  color:white;
+  max-width: 3em;
+  border:solid 1px black;
+  border-radius: 5px;
+}
+.Data-input input:focus
+{
+  outline:none;
 
 }
+
+.Grid-Table
+{
+  border-collapse: separate;
+  border-spacing: 15px 0px;
+  margin:auto;
+  margin-top: 5px;
+}
+.Grid-Table th
+{
+  padding:5px;
+}
+.Grid-Table th, .Grid-Table td
+{
+  border:solid 1px black;
+}
+.BackgroundColor
+{
+  background-color: #b3b3ff;
+  color:white;
+}
+
+
 .btn-3D
 {
   position:relative;
-  background-color: #8c8c8c;
-  color:white;
   border:none;
   padding: 5px;
   border-radius: 2px;
-  box-shadow: -6px 6px 0 hsl(350, 10%, 30%);
+  box-shadow: -6px 6px 0 hsl(244, 21%, 65%);
+  outline: none;
 }
 .btn-3D:hover
 {
-  background-color: hsl(350, 10%, 45%);
+  background-color: hsl(244, 30%, 65%);
 }
 .btn-3D:active
 {
-  background: hsl(350, 10%, 40%);
+  background: hsl(244, 21%, 70%);
   top: 3px;
   left: -3px;
-  box-shadow: -3px 3px 0 hsl(350, 10%, 30%);
+  box-shadow: -3px 3px 0 hsl(244, 21%%, 65%);
+}
+.btn-3D::before
+{
+  position: absolute;
+  display:block;
+  content:"";
+  height: 0;
+  width: 0;
+  border:solid 6px transparent;
+  border-right: solid 6px hsl(244, 21%, 65%);
+  border-left-width: 0;
+  background:none;
+  top:0;
+  left:-6px;
+}
+.btn-3D::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border: solid 6px transparent;
+  border-top: solid 6px hsl(244, 21%, 65%);
+  border-bottom-width: 0px;
+  background:none;
+  right: 0;
+  bottom: -6px;
 }
 
+  .btn-3D:active::before {
+    border: solid 6px transparent;
+    border-right: solid 6px hsl(244, 21%, 65%);
+    border-left-width: 0px;
+    left: -6px;
+  }
+
+  .btn-3D:active::after {
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(244, 21%, 65%);
+    border-bottom-width: 0px;
+    bottom: -6px;
+  }
+
 /* Welcome Board -ENDS*/
+/*Tooltip -START*/
+.Input_Grp ::before
+  {
+    background-color: rgba(0, 0, 0, 0.8);
+    content: "hello";
+    /*position: absolute;
+     z-index: 2;
+     display:none;
+     width: 200px;
+     max-width: 200px;
+     padding: 10px;
+     font-size: 0.8em;
+     line-height: 1.4;
+     border-radius: 5px;
+     background-color: rgba(0, 0, 0, 0.8);
+     color: white;
+     content: "hello";*/
+}
+/*Tooltip -END*/
 
 
+/*Grid-Page.css - START*/
 .container
 {
   display:grid;
   grid-gap: 2px;
   box-shadow: 1px 0 5px 0 ;
-  width: min-content;  
+  width: min-content;
 }
+
+/*Grid-Page.css - END*/

@@ -1,9 +1,10 @@
-function addGrid(col, row)
+var Input_height;
+var Input_width;
+function addGrid()
 {
-
   var container = document.getElementsByClassName("container");
-
-
+  var row = Input_height;
+  var col = Input_width;
 
   for(var i=0; i<(row*col);i++)
   {
@@ -22,6 +23,21 @@ function addGrid(col, row)
 
  var str = "repeat(" + row+ ", 20px)/repeat(" +col +", 20px)";
   container[0].style.gridTemplate=str;
+}
 
+function validateInput()
+{
+   Input_height = document.getElementById("Input_height").value;
+   Input_width = document.getElementById("Input_width").value;
+  alert(Input_width);
+  if((Input_height > 24) || (Input_width > 64))
+  {
+    alert("Please enter the values in limit")
+  }
+  else {
+    {
+      window.location.href='Grid-Page.html';
 
+    }
+  }
 }
