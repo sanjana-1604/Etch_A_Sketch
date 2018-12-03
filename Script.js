@@ -1,5 +1,5 @@
-var Input_height;
-var Input_width;
+var Input_height =0;
+var Input_width =0;
 function addGrid()
 {
   var container = document.getElementsByClassName("container");
